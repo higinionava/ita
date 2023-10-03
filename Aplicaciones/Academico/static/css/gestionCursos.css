@@ -1,0 +1,23 @@
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+campo-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3e%3cpath d='M7 7l3-3 3 3m0 6l-3 3-3-3' stroke='%23a1a1aa' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: right 0.5rem center;
+    background-size: 1.5em 1.5em;
+    border-color: #d4d4d8;
+    border-width: 1px;
+    border-radius: 0.375rem;
+    padding-top: 0.6rem;
+    padding-right: 2.5rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.75rem;
+    font-size: 0.5rem;
+    line-height: 1.6rem;
+  }

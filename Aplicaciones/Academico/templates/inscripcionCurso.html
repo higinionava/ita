@@ -1,0 +1,58 @@
+{% extends "./base.html" %}
+
+{% block title %} Alta al Taller {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong class="text-dark">{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <h2>Inscripción a Taller</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/inscribirCurso/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="txtCodigo" name="txtCodigo" class="form-control" placeholder="Matrícula# #=1 taller1 #=2 taller2"
+                            minlength="9" maxlength="9" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Nombre"
+                            maxlength="50" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="numCreditos" name="numCreditos" class="form-control" class="campo-select">
+                            <option>Creación de un crud de 0 100 con django</option>
+                            <option selected>TECNOLOGIAS INALÁMBRICAS Y REDES SOCIALES</option>
+                            <option>MICROFRAMEWORKS PARA FRONT END</option>
+                            <option selected>DESARROLLO DE INVESTIGACIÓN E INNOVACIÓN</option>
+                            <option>ADMINISTRACIÓN DE VERSIONES CON GIT</option>
+                            <option selected>DISEÑO DE PROTOTIPOS DE BAJO NIVEL</option>
+                            <option>R EN CIENCIA DE DATOS</option>
+                            <option selected>CREACIÓN DE APLICACIONES CON POWER APPS </option>
+                            <option>LENGUAJE DE MODELADO UNIFICADO (UML)</option>
+                            <option selected>IA COMO HERRAMIENTA PARA EL APRENDIZAJE</option>
+                            <option>COMUNICACIÓN SERIAL EN ARDUINO</option>
+                            <option selected>HERRAMIENTAS PARA EL ANALISIS DE DATOS</option>
+                            <option>ADMINISTRA TUS PROYECTOS CON SW PROJECT</option>
+                            <option selected>HERRAMIENTAS PARA CONTROL DEL TALENTO HUMANO</option>
+                            <option>EVALUACIÓN DE ACCESIBILIDAD</option>
+                            <option selected>GUERRA DE CODIGO</option>
+                            <option>SMASH</option>
+                            <option>FUTBOL VIRTUAL</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
